@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* --------------------------------------------------------------------------
-   1. Countdown Timer (Target: Nov 15, 2026)
+   1. Countdown Timer (Target: Nov 21, 2026)
    -------------------------------------------------------------------------- */
 function initCountdown() {
-    const eventDate = new Date("November 15, 2026 08:30:00").getTime();
+    const eventDate = new Date("November 21, 2026 08:30:00").getTime();
 
     function updateTimer() {
         const now = new Date().getTime();
