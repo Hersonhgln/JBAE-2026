@@ -315,7 +315,7 @@ function downloadBadge() {
 
 // Copy Share Text for WhatsApp / LinkedIn
 function copyShareText() {
-    const shareText = `🌿 J'Y SERAI ! Je participerai à la 2ᵉ Édition de la Journée Béninoise de l'Agroécologie (JBAE 2026) du 15 au 17 Novembre 2026 à Cotonou !\n\nUn rendez-vous incontournable pour célébrer l'agroécologie, les savoirs locaux et les opportunités pour la jeunesse béninoise.\n\n👉 Générez votre badge et inscrivez-vous sur : https://www.jbae-benin.org #JBAE2026 #AgroécologieBénin`;
+    const shareText = `🌿 J'Y SERAI ! Je participerai à la 2ᵉ Édition de la Journée Béninoise de l'Agroécologie (JBAE 2026) du 15 au 17 Novembre 2026 à Porto-Novo !\n\nUn rendez-vous incontournable pour célébrer l'agroécologie, les savoirs locaux et les opportunités pour la jeunesse béninoise.\n\n👉 Générez votre badge et inscrivez-vous sur : https://www.jbae-benin.org #JBAE2026 #AgroécologieBénin`;
 
     const setSuccessState = () => {
         const btn = document.getElementById("btn-copy-share");
