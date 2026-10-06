@@ -469,20 +469,45 @@ function initMobileNav() {
     const navLinks = document.getElementById("nav-links");
 
     if (menuBtn && navLinks) {
-        menuBtn.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-            if (navLinks.classList.contains("active")) {
-                navLinks.style.display = "flex";
-                navLinks.style.flexDirection = "column";
-                navLinks.style.position = "absolute";
-                navLinks.style.top = "100%";
-                navLinks.style.left = "0";
-                navLinks.style.right = "0";
-                navLinks.style.backgroundColor = "white";
-                navLinks.style.padding = "1.5rem";
-                navLinks.style.boxShadow = "0 8px 24px rgba(0,0,0,0.1)";
-            } else {
-                navLinks.style.display = "";
+        menuBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isActive = navLinks.classList.toggle("active");
+            menuBtn.setAttribute("aria-expanded", isActive ? "true" : "false");
+            const icon = menuBtn.querySelector("i");
+            if (icon) {
+                if (isActive) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-xmark");
+                } else {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+            }
+        });
+
+        // Close mobile menu when clicking any navigation link
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                menuBtn.setAttribute("aria-expanded", "false");
+                const icon = menuBtn.querySelector("i");
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+            });
+        });
+
+        // Close when clicking outside navbar
+        document.addEventListener("click", (e) => {
+            if (!navLinks.contains(e.target) && !menuBtn.contains(e.target) && navLinks.classList.contains("active")) {
+                navLinks.classList.remove("active");
+                menuBtn.setAttribute("aria-expanded", "false");
+                const icon = menuBtn.querySelector("i");
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
             }
         });
     }
