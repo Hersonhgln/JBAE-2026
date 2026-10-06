@@ -443,7 +443,19 @@ function handleFormSubmit(e) {
     e.preventDefault();
     const firstname = document.getElementById("reg-firstname").value.trim();
     const lastname = document.getElementById("reg-lastname").value.trim();
-    const category = document.getElementById("reg-category").value;
+    const email = document.getElementById("reg-email").value.trim();
+    const phone = document.getElementById("reg-phone").value.trim();
+    const packSelect = document.getElementById("reg-pack");
+    const packValue = packSelect ? packSelect.value : "";
+    const packLabel = packSelect && packSelect.selectedIndex >= 0 ? packSelect.options[packSelect.selectedIndex].text : packValue;
+    const categorySelect = document.getElementById("reg-category");
+    const category = categorySelect ? categorySelect.value : "PARTICIPANT";
+    const categoryLabel = categorySelect && categorySelect.selectedIndex >= 0 ? categorySelect.options[categorySelect.selectedIndex].text : category;
+
+    // Determine amount
+    let amountText = "2 000 FCFA";
+    if (packValue === "PACK_COMPLET") amountText = "3 000 FCFA";
+    else if (packValue === "STAND_EXPOSANT") amountText = "5 000 FCFA";
 
     // Update Badge State automatically with registered name
     badgeState.fullname = `${firstname} ${lastname}`.toUpperCase();
@@ -454,9 +466,35 @@ function handleFormSubmit(e) {
 
     updateBadgeCanvas();
 
+    // Prepare WhatsApp Message to 43182313 (+22943182313)
+    const whatsappNumber = "22943182313";
+    const messageLines = [
+        "🌿 *NOUVELLE INSCRIPTION - JBAE 2026*",
+        "------------------------------------",
+        `👤 *Nom & Prénom :* ${lastname.toUpperCase()} ${firstname}`,
+        `📱 *Téléphone / WhatsApp :* ${phone}`,
+        `📧 *Email :* ${email}`,
+        `🏷️ *Formule :* ${packLabel}`,
+        `💰 *Montant :* ${amountText}`,
+        `🎯 *Profil / Rôle :* ${categoryLabel}`,
+        "------------------------------------",
+        "📍 _Message envoyé depuis le site officiel de la JBAE 2026_"
+    ];
+    const encodedMessage = encodeURIComponent(messageLines.join("\n"));
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Update the fallback / reopen link in modal success
+    const reopenBtn = document.getElementById("btn-reopen-whatsapp");
+    if (reopenBtn) {
+        reopenBtn.href = whatsappUrl;
+    }
+
     // Show Success State inside modal
     document.getElementById("registration-form").classList.add("hidden");
     document.getElementById("modal-success").classList.remove("hidden");
+
+    // Open WhatsApp in new tab/window
+    window.open(whatsappUrl, "_blank");
 }
 
 function scrollToBadge() {
