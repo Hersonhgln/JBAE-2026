@@ -443,14 +443,13 @@ function closeRegisterModal() {
    EmailJS Configuration & Confirmation Mail Dispatcher
    ========================================================================== */
 const EMAILJS_CONFIG = {
-    // Remplacer ces 3 clés une fois votre compte EmailJS créé (gratuit sur https://www.emailjs.com)
-    PUBLIC_KEY: "VOTRE_PUBLIC_KEY",      // ex: "uXy7z8AbCdEf"
-    SERVICE_ID: "VOTRE_SERVICE_ID",      // ex: "service_jbae2026"
-    TEMPLATE_ID: "VOTRE_TEMPLATE_ID"     // ex: "template_confirmation"
+    PUBLIC_KEY: "HyV3oZbJmk2SJxkS3",
+    SERVICE_ID: "service_cjsbw5o",
+    TEMPLATE_ID: "JBAE_f9sfayi"
 };
 
-// Initialisation SDK EmailJS si configuré
-if (typeof emailjs !== "undefined" && EMAILJS_CONFIG.PUBLIC_KEY !== "VOTRE_PUBLIC_KEY") {
+// Initialisation SDK EmailJS
+if (typeof emailjs !== "undefined") {
     emailjs.init({ publicKey: EMAILJS_CONFIG.PUBLIC_KEY });
 }
 
