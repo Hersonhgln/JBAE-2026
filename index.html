@@ -520,8 +520,22 @@
 
                 <!-- Live Price Summary Box -->
                 <div class="price-summary-box" id="price-summary-box">
-                    <span>Montant total à régler à l'accueil :</span>
+                    <span>Montant total à régler :</span>
                     <strong id="price-summary-amount">2 000 FCFA</strong>
+                </div>
+
+                <div style="background: rgba(45, 106, 79, 0.08); border: 1px dashed var(--primary-light); border-radius: var(--radius-sm); padding: 0.9rem; margin-bottom: 1.25rem; font-size: 0.85rem;">
+                    <div style="font-weight: 700; color: var(--primary-dark); margin-bottom: 0.35rem;">
+                        <i class="fa-solid fa-money-bill-transfer"></i> Moyens de transfert (Bénéficiaire : <strong>Sènan FATON</strong>) :
+                    </div>
+                    <ul style="list-style: none; padding-left: 0; margin: 0; display: flex; flex-direction: column; gap: 0.25rem; color: var(--text-dark);">
+                        <li>💛 <strong>MTN MoMo :</strong> <code>01 97 47 75 35</code></li>
+                        <li>💙 <strong>MOOV Money :</strong> <code>01 60 07 55 36</code></li>
+                        <li>💚 <strong>CELTIIS Cash :</strong> <code>01 43 18 23 13</code></li>
+                    </ul>
+                    <small style="display: block; margin-top: 0.4rem; color: var(--text-muted);">
+                        ⚡ Règlement à l'avance recommandé pour éviter le sold-out • Paiement sur place possible le jour J selon les places disponibles.
+                    </small>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block btn-lg">
@@ -532,7 +546,7 @@
             <div class="modal-success hidden" id="modal-success">
                 <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
                 <h3>Inscription Enregistrée !</h3>
-                <p id="modal-success-msg">Un e-mail récapitulatif avec les modalités de paiement vous a été envoyé. La discussion WhatsApp s'ouvre pour finaliser votre commande avec notre équipe.</p>
+                <p id="modal-success-msg">Un e-mail récapitulatif avec les modalités de transfert (copie à <code>gfaton251@gmail.com</code>) vous a été préparé. La discussion WhatsApp s'ouvre pour valider votre place.</p>
                 <div class="success-actions" style="display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem;">
                     <a id="btn-reopen-whatsapp" href="#" target="_blank" class="btn btn-secondary btn-block">
                         <i class="fa-brands fa-whatsapp"></i> Envoyer ma preuve / Discuter sur WhatsApp (43 18 23 13)

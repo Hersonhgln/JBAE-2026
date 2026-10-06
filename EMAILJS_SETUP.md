@@ -22,8 +22,9 @@ Pour activer l'envoi réel en boîte de réception sans aucun serveur, suivez ce
 
 ### Étape 3 : Créer le modèle d'e-mail (Email Template)
 1. Dans le menu de gauche, allez dans **Email Templates** -> **Create New Template**.
-2. Configurez le champ destinataire :
+2. Configurez les champs d'en-tête (en haut de l'éditeur EmailJS) :
    - **To Email** : `{{to_email}}`
+   - **Cc** (ou BCC) : `{{cc_email}}` *(soit gfaton251@gmail.com)*
    - **From Name** : `Comité JBAE 2026`
    - **Subject** : `Confirmation de votre inscription - JBAE 2026 (Modalités de paiement)`
 3. Dans le corps du message (**Content / HTML**), collez le modèle suivant :
@@ -50,16 +51,30 @@ Pour activer l'envoi réel en boîte de réception sans aucun serveur, suivez ce
             </ul>
         </div>
 
-        <div style="background: #FFF8E7; border: 1px solid #E9C46A; padding: 15px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="margin-top: 0; color: #8B5A2B; font-size: 16px;">💳 Modalités de règlement :</h3>
-            <p style="margin-bottom: 10px;">Afin de garantir votre place et <strong>éviter le sold-out</strong>, nous vous recommandons vivement d'effectuer votre paiement à l'avance par Mobile Money :</p>
+        <div style="background: #FFF8E7; border: 1px solid #E9C46A; padding: 18px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="margin-top: 0; color: #8B5A2B; font-size: 16px;">💳 Modalités de règlement par Transfert :</h3>
+            <p style="margin-bottom: 12px;">Afin de garantir votre place et <strong>éviter le sold-out</strong>, nous vous recommandons vivement d'effectuer votre paiement à l'avance sur l'un des comptes suivants :</p>
             
-            <ul style="margin-bottom: 15px;">
-                <li><strong>Numéro Mobile Money (MTN / Moov) :</strong> <span style="font-size: 16px; font-weight: bold; color: #1E3A2B;">{{momo_number}}</span></li>
-                <li><strong>Nom du Bénéficiaire :</strong> <span style="font-weight: bold;">{{beneficiary_name}}</span></li>
-            </ul>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 14px;">
+                <tr>
+                    <td style="padding: 6px 0;">💛 <strong>MTN MoMo :</strong></td>
+                    <td style="padding: 6px 0; font-family: monospace; font-size: 16px; font-weight: bold; color: #1E3A2B;">01 97 47 75 35</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 0;">💙 <strong>MOOV Money :</strong></td>
+                    <td style="padding: 6px 0; font-family: monospace; font-size: 16px; font-weight: bold; color: #1E3A2B;">01 60 07 55 36</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 0;">💚 <strong>CELTIIS Cash :</strong></td>
+                    <td style="padding: 6px 0; font-family: monospace; font-size: 16px; font-weight: bold; color: #1E3A2B;">01 43 18 23 13</td>
+                </tr>
+            </table>
 
-            <p style="margin-bottom: 0;"><strong>Confirmation :</strong> Dès votre transaction effectuée, veuillez envoyer la capture d'écran de confirmation directement par WhatsApp au <strong>{{momo_number}}</strong>.</p>
+            <p style="margin: 8px 0; font-size: 15px;"><strong>Nom du Bénéficiaire :</strong> <span style="background: #ffffff; padding: 3px 8px; border-radius: 4px; border: 1px solid #e2ece9; font-weight: bold; color: #1E3A2B;">Sènan FATON</span></p>
+
+            <p style="margin-top: 12px; margin-bottom: 0; font-size: 13.5px; color: #8B5A2B;">
+                <strong>📲 Confirmation :</strong> Dès votre transaction effectuée, veuillez envoyer la capture d'écran du transfert directement sur WhatsApp au <strong>01 43 18 23 13</strong> (+229 43 18 23 13).
+            </p>
         </div>
 
         <p style="font-size: 13px; color: #5C6E66; font-style: italic;">
@@ -68,13 +83,13 @@ Pour activer l'envoi réel en boîte de réception sans aucun serveur, suivez ce
 
         <div style="text-align: center; margin: 30px 0 10px 0;">
             <a href="{{whatsapp_link}}" style="background: #25D366; color: #ffffff; text-decoration: none; padding: 12px 25px; border-radius: 50px; font-weight: bold; display: inline-block;">
-                Ouvrir la discussion WhatsApp avec le comité
+                Envoyer ma capture sur WhatsApp (43 18 23 13)
             </a>
         </div>
     </div>
 
     <div style="background: #F5EBE0; padding: 15px; text-align: center; font-size: 12px; color: #5C6E66;">
-        Comité d'organisation JBAE 2026 • Cotonou, Bénin • contact@jbae-benin.org
+        Comité d'organisation JBAE 2026 • Cotonou, Bénin • Contact : gfaton251@gmail.com
     </div>
 </div>
 ```

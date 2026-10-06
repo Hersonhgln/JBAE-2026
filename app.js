@@ -471,12 +471,15 @@ async function sendConfirmationEmail(data) {
     const templateParams = {
         to_name: `${data.firstname} ${data.lastname}`,
         to_email: data.email,
+        cc_email: "gfaton251@gmail.com",
         phone: data.phone,
         pack_name: data.packLabel,
         amount: data.amountText,
         category: data.categoryLabel,
-        beneficiary_name: "Grâce FATON",
-        momo_number: "+229 43 18 23 13",
+        beneficiary_name: "Sènan FATON",
+        mtn_number: "0197477535",
+        moov_number: "0160075536",
+        celtiis_number: "0143182313",
         whatsapp_link: data.whatsappUrl
     };
 
@@ -519,7 +522,7 @@ function handleFormSubmit(e) {
 
     updateBadgeCanvas();
 
-    // Prepare WhatsApp Message to 43182313 (+22943182313)
+    // Prepare WhatsApp Message to 43182313 (+22943182313 / 0143182313)
     const whatsappNumber = "22943182313";
     const messageLines = [
         "🌿 *NOUVELLE INSCRIPTION - JBAE 2026*",
@@ -531,7 +534,10 @@ function handleFormSubmit(e) {
         `💰 *Montant :* ${amountText}`,
         `🎯 *Profil / Rôle :* ${categoryLabel}`,
         "------------------------------------",
-        "💳 *Paiement :* MoMo / Flooz vers Grâce FATON (+229 43 18 23 13) ou à l'accueil",
+        "💳 *Modalités de Paiement (Bénéficiaire : Sènan FATON)* :",
+        "• MTN MoMo : 0197477535",
+        "• MOOV Money : 0160075536",
+        "• CELTIIS Cash : 0143182313",
         "------------------------------------",
         "📍 _Message envoyé depuis le site officiel de la JBAE 2026_"
     ];
