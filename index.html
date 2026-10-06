@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBAE 2026 - 2ᵉ Édition | Journée Béninoise de l'Agroécologie</title>
+    <meta name="description"
+        content="Site officiel de la 2ᵉ Édition de la Journée Béninoise de l'Agroécologie (JBAE 2026) organisée par Génération Lumière & D'Natures. Découvrez le thème, tarifs, programme, inscrivez-vous et générez votre badge 'J'y serai !'">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo">
+                <div class="logo-icon">
+                    <img src="assets/logo-jbae.png" alt="Logo JBAÉ" class="logo-image">
+                </div>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#about"><i class="fa-solid fa-circle-info"></i> Le Thème</a>
+                <a href="#key-info"><i class="fa-solid fa-calendar-check"></i> Programme</a>
+                <a href="#tarifs"><i class="fa-solid fa-ticket"></i> Tarifs & Pass</a>
+                <a href="#badge-section" class="nav-highlight"><i class="fa-solid fa-id-card"></i> Badge "J'y serai"</a>
+                <a href="#partners"><i class="fa-solid fa-handshake"></i> Partenaires ET Stands</a>
+                <a href="https://flic.kr/s/aHBqjD6Tou"><i class="fa-solid fa-image"></i> Galerie d'images</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Menu principal">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+
+            <h1 class="hero-title">
+                « L'Agroécologie : entre <span class="gradient-text">savoirs locaux, innovations</span> et opportunités
+                pour la jeunesse béninoise »
+            </h1>
+
+            <p class="hero-subtitle">
+                Le grand rassemblement stratégique dédié à la jeunesse, aux agriculteurs, chercheurs et entrepreneurs
+                pour accélérer la transition agroécologique au Bénin.
+            </p>
+
+            <!-- Event Countdown -->
+            <div class="countdown-wrapper">
+                <div class="countdown-header"><i class="fa-regular fa-clock"></i> Compte à rebours avant la 2ᵉ Édition :
+                </div>
+                <div class="countdown-grid" id="countdown-timer">
+                    <div class="time-box">
+                        <span class="time-value" id="days">45</span>
+                        <span class="time-label">Jours</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="hours">12</span>
+                        <span class="time-label">Heures</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="minutes">34</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="seconds">20</span>
+                        <span class="time-label">Secondes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="hero-actions">
+                <button class="btn btn-primary btn-lg" onclick="openRegisterModal('PASS_SIMPLE')">
+                    <i class="fa-solid fa-ticket"></i> Réserver mon Pass (2 000 FCFA)
+                </button>
+                <a href="#badge-section" class="btn btn-secondary btn-lg">
+                    <i class="fa-solid fa-address-card"></i> Générer mon Badge "J'y serai !"
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme & Presentation Section (with Amazon of Benin visual) -->
+    <section class="promoter-section" id="about">
+        <div class="container">
+            <h2 class="section-title">Présentation de la 2ᵉ Édition JBAE</h2>
+
+            <div class="amazone-banner-card">
+                <div class="amazone-img-box">
+                    <img src="assets/Image-grâce.jpeg" alt="Image d'évènement">
+                    <div class="amazone-overlay">
+                        <span class="amazone-tag"><i class="fa-solid fa-shield-halved"></i> Fierté & Identité
+                            Béninoise</span>
+                        <h3>Bâtir la Souveraineté Alimentaire du Bénin</h3>
+                    </div>
+                </div>
+                <div class="amazone-content">
+                    <p class="lead-text">
+                        L’agriculture béninoise fait face à des défis majeurs : préservation des sols, durabilité des
+                        systèmes de production, sécurité alimentaire et insertion professionnelle des jeunes.
+                    </p>
+                    <p>
+                        Portée par <strong>Génération Lumière</strong> et <strong>D'Natures</strong>, la 2ᵉ édition de
+                        la JBAE est un espace d'échanges, d'apprentissages concrets, de découvertes et de mise en réseau
+                        réunissant étudiants, jeunes entrepreneurs, producteurs, chercheurs et partenaires.
+                    </p>
+
+                    <div class="three-pillars-grid">
+                        <div class="pillar-card">
+                            <i class="fa-solid fa-book-open-reader pillar-icon"></i>
+                            <h4>Savoirs Locaux</h4>
+                            <p>Valoriser le patrimoine traditionnel utile à la transition écologique.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fa-solid fa-lightbulb pillar-icon"></i>
+                            <h4>Innovations</h4>
+                            <p>Améliorer les pratiques de production, transformation et marché bio.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fa-solid fa-rocket pillar-icon"></i>
+                            <h4>Jeunesse & Emploi</h4>
+                            <p>Débloquer des opportunités d'entrepreneuriat vert et de financements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Detailed 1-Day Program Section -->
+    <section class="key-info-section" id="key-info">
+        <div class="container">
+            <h2 class="section-title">Programme Officiel de la Journée</h2>
+            <p class="section-subtitle">
+                Un condensé d'activités à fort impact articulé autour d'ateliers, de conférences, d'expositions et de
+                sessions B2B.
+            </p>
+
+            <div class="program-timeline-card">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-time">08h00 - 09h00</span>
+                        <div class="timeline-body">
+                            <h5><i class="fa-solid fa-id-badge"></i> Accueil & Émargement des Participants</h5>
+                            <p>Installation, remise des badges et des kits de participation (incluant la pause-café).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">09h00 - 10h00</span>
+                        <div class="timeline-body">
+                            <h5><i class="fa-solid fa-award"></i> Cérémonie d'Ouverture Officielle</h5>
+                            <p>Mots de bienvenue des comités <strong>Génération Lumière</strong> et
+                                <strong>D'Natures</strong>, allocutions des autorités et partenaires stratégiques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">10h00 - 11h15</span>
+                        <div class="timeline-body">
+                            <h5><i class="fa-solid fa-microphone"></i> Conférence Inaugurale</h5>
+                            <p>Présentation du thème central : <em>« L’agroécologie : entre savoirs locaux, innovations
+                                    et opportunités pour la jeunesse béninoise »</em>.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">11h15 - 12h45</span>
+                        <div class="timeline-body">
+                            <h5><i class="fa-solid fa-comments"></i> Panel d'Échanges & Débats</h5>
+                            <p>Partage d'expériences sur les savoirs locaux, l'innovation, les difficultés d'insertion
+                                des jeunes, l'entrepreneuriat et le financement.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">12h45 - 14h00</span>
+                        <div class="timeline-body">
+                            <h5><i class="fa-solid fa-utensils"></i> Pause Déjeuner & Ouverture de la Foire / Exposition
+                            </h5>
+                            <p>Visite guidée des stands de producteurs et transformateurs agro-bio locaux (20+ Stands).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">14h00 - 15h30</span>
+                        <div class="timeline-body">
+                            <h5><i class="fa-solid fa-gears"></i> Sessions Pratiques & Ateliers participatifs</h5>
+                            <p>Démonstrations concrètes sur les bio-intrants, la préparation de bio-pesticides, le
+                                compostage et les semences locales.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">15h30 - 17h00</span>
+                        <div class="timeline-body">
+                            <h5><i class="fa-solid fa-handshake-simple"></i> Rencontres B2B & Networking</h5>
+                            <p>Mise en relation directe entre jeunes entrepreneurs, investisseurs, chercheurs et
+                                acheteurs.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">17h00 - 18h00</span>
+                        <div class="timeline-body">
+                            <h5><i class="fa-solid fa-flag-checkered"></i> Restitution des Travaux & Clôture</h5>
+                            <p>Synthèse générale des recommandations, remise des attestations et mot de fin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Rates Section (FCFA) -->
+    <section class="tarifs-section" id="tarifs">
+        <div class="container">
+            <h2 class="section-title">Tarifs & Commodités Incluses</h2>
+            <p class="section-subtitle">
+                Des tarifs étudiés et accessibles pour garantir la participation massive de la jeunesse béninoise
+            </p>
+            <div class="pricing-grid">
+                <!-- Pass Simple -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Participation Simple</h4>
+                        <div class="price">2 000 <span class="currency">FCFA</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Accès à l'ensemble des conférences & panels</li>
+                        <li><i class="fa-solid fa-check"></i> Participation aux ateliers pratiques</li>
+                        <li><i class="fa-solid fa-check"></i> Accès à l'espace Foire & Stands d'Exposition</li>
+                        <li><i class="fa-solid fa-check"></i> Pause-café offerte par le comité</li>
+                        <li><i class="fa-solid fa-check"></i> Kit participant inclus</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" onclick="openRegisterModal('PASS_SIMPLE')">
+                        S'inscrire (2 000 FCFA)
+                    </button>
+                </div>
+
+                <!-- Pack Complet (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Recommandé</div>
+                    <div class="pricing-header">
+                        <h4>Pack Complet</h4>
+                        <div class="price">3 000 <span class="currency">FCFA</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Tout le contenu du Pass Simple</li>
+                        <li><i class="fa-solid fa-check"></i> Pause-café & Kit du participant inclus</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Attestation officielle de participation</strong>
+                        </li>
+                        <li><i class="fa-solid fa-check"></i> Inscription prioritaire aux sessions B2B</li>
+                    </ul>
+                    <button class="btn btn-secondary btn-block" onclick="openRegisterModal('PACK_COMPLET')">
+                        Choisir le Pack Complet
+                    </button>
+                </div>
+
+                <!-- Stand Exposant -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Stand d'Exposition</h4>
+                        <div class="price">5 000 <span class="currency">FCFA</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Espace d'exposition réservé (Table + 2 Chaises)</li>
+                        <li><i class="fa-solid fa-check"></i> Valorisation directe de vos produits bio</li>
+                        <li><i class="fa-solid fa-check"></i> Visibilité devant 500+ participants & médias</li>
+                        <li><i class="fa-solid fa-check"></i> Référencement dans le catalogue JBAE</li>
+                    </ul>
+                    <button class="btn btn-light btn-block" onclick="openRegisterModal('STAND_EXPOSANT')">
+                        Réserver un Stand (5 000 FCFA)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Optional Certificate Option Note -->
+            <div class="pricing-note">
+                <i class="fa-solid fa-circle-info"></i> <strong>Note :</strong> L'attestation de participation seule
+                peut également être sollicitée ultérieurement pour 1 000 FCFA.
+            </div>
+        </div>
+    </section>
+
+    <!-- Badge Generator Section ("J'y serai !") -->
+    <section class="badge-section" id="badge-section">
+        <div class="container">
+            <h2 class="section-title">Générez votre Badge "J'y serai !"</h2>
+            <p class="section-subtitle">
+                Personnalisez et téléchargez votre badge officiel pour affirmer votre présence sur WhatsApp, LinkedIn,
+                Facebook et Instagram !
+            </p>
+
+            <div class="badge-generator-grid">
+                <!-- Controls Form -->
+                <div class="badge-controls-card">
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-image"></i> Sélectionner votre photo *</label>
+                        <div class="photo-upload-zone photo-upload-zone-lg" id="photo-upload-zone"
+                            onclick="document.getElementById('badge-photo-input').click()">
+                            <input type="file" id="badge-photo-input" accept="image/*" class="hidden"
+                                onchange="handlePhotoUpload(event)">
+                            <div class="upload-placeholder" id="upload-placeholder">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span>Cliquez pour importer votre photo</span>
+                                <small>Photo carrée recommandée &bull; JPG ou PNG &bull; Max 5 Mo</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="badge-action-btns">
+                        <button class="btn btn-primary btn-block btn-lg" id="btn-download-badge" onclick="downloadBadge()">
+                            <i class="fa-solid fa-download"></i> Télécharger mon Badge (PNG HD)
+                        </button>
+                        <button class="btn btn-secondary btn-block" id="btn-copy-share" onclick="copyShareText()">
+                            <i class="fa-brands fa-whatsapp"></i> Copier le texte de partage WhatsApp &amp; LinkedIn
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Preview Canvas -->
+                <div class="badge-preview-card">
+                    <div class="preview-header">
+                        <span><i class="fa-solid fa-id-badge"></i> Affiche Officielle "J'y serai !"</span>
+                    </div>
+
+                    <div class="canvas-container">
+                        <canvas id="badgeCanvas" width="1254" height="1254"></canvas>
+                    </div>
+
+                    <div class="badge-share-tips">
+                        <p><i class="fa-solid fa-share-nodes"></i> N'oubliez pas d'ajouter le hashtag
+                            <strong>#JBAE2026</strong> lors de votre publication sur vos réseaux sociaux !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Organizers Section -->
+    <section class="partners-section" id="partners">
+        <div class="container">
+            
+            <h2 class="section-title">Comité d'Organisation & Partenaires</h2>
+
+            <div class="organizers-highlight-card">
+                <h3><i class="fa-solid fa-bullseye"></i> Initiative Portée par :</h3>
+                <div class="org-logos-row">
+                    <div class="org-box">
+                        <img src="assets/Logo-gl.png" alt="Logo Génération Lumière" class="logo-image">
+                        <div>
+                            <h4>Génération Lumière</h4>
+                            <p>Organisation de la jeunesse engagée</p>
+                        </div>
+                    </div>
+
+                    <div class="org-box">
+                        <img src="assets/logo-dnatures.jpg" alt="Logo D'Natures" class="logo-image">
+                        <div>
+                            <h4>D'Natures</h4>
+                            <p>Promotion de l'environnement et l'écologie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo-box">
+                        <i class="fa-solid fa-building-columns partner-icon"></i>
+                    </div>
+                    <h5>Ministère de l'Agriculture, de l'Élevage et de la Pêche</h5>
+                    <p class="partner-type">Partenaire Institutionnel</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo-box">
+                        <i class="fa-solid fa-seedling partner-icon"></i>
+                    </div>
+                    <h5>FAO Bénin</h5>
+                    <p class="partner-type">Partenaire Technique</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo-box">
+                        <i class="fa-solid fa-earth-africa partner-icon"></i>
+                    </div>
+                    <h5>GIZ Bénin</h5>
+                    <p class="partner-type">Coopération Internationale</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo-box">
+                        <i class="fa-solid fa-users partner-icon"></i>
+                    </div>
+                    <h5>Réseau Agroécologie Bénin</h5>
+                    <p class="partner-type">Réseau d’Agriculteurs Bio</p>
+                </div>
+            </div>
+-->
+            <div class="partner-cta-banner">
+                <div>
+                    <h3>Vous souhaitez soutenir la JBAE ou réserver un stand ?</h3>
+                    <p>Découvrez nos opportunités de sponsoring, partenariat et stands d'exposition (5 000 FCFA).</p>
+                </div>
+                <button class="btn btn-light btn-lg" onclick="openRegisterModal('STAND_EXPOSANT')">
+                    <i class="fa-solid fa-store"></i> Réserver un Stand d'Exposition
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Floating Side Scroll-Snap Navigation Dots -->
+    <div class="side-dots" id="side-dots">
+        <a href="#hero" class="dot-item active" data-section="hero" title="01. Accueil">
+            <span class="dot-label">01. Accueil</span>
+            <span class="dot-icon"></span>
+        </a>
+        <a href="#about" class="dot-item" data-section="about" title="02. Présentation">
+            <span class="dot-label">02. Le Thème</span>
+            <span class="dot-icon"></span>
+        </a>
+        <a href="#key-info" class="dot-item" data-section="key-info" title="03. Programme">
+            <span class="dot-label">03. Programme</span>
+            <span class="dot-icon"></span>
+        </a>
+        <a href="#tarifs" class="dot-item" data-section="tarifs" title="04. Tarifs">
+            <span class="dot-label">04. Tarifs & Pass</span>
+            <span class="dot-icon"></span>
+        </a>
+        <a href="#badge-section" class="dot-item" data-section="badge-section" title="05. Badge J'y serai">
+            <span class="dot-label">05. Badge "J'y serai"</span>
+            <span class="dot-icon"></span>
+        </a>
+        <a href="#partners" class="dot-item" data-section="partners" title="06. Partenaires">
+            <span class="dot-label">06. Partenaires</span>
+            <span class="dot-icon"></span>
+        </a>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal-overlay hidden" id="register-modal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeRegisterModal()">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fa-solid fa-ticket"></i></div>
+                <h3>Formulaire d'Inscription - JBAE 2026</h3>
+                <p>2ᵉ Édition de la Journée Béninoise de l'Agroécologie</p>
+            </div>
+
+            <form id="registration-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-firstname">Prénom *</label>
+                        <input type="text" id="reg-firstname" required placeholder="Votre prénom">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-lastname">Nom *</label>
+                        <input type="text" id="reg-lastname" required placeholder="Votre nom">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-email">Adresse Email *</label>
+                        <input type="email" id="reg-email" required placeholder="exemple@domaine.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-phone">Numéro WhatsApp / Téléphone *</label>
+                        <input type="tel" id="reg-phone" required placeholder="+229 97 00 00 00">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-pack">Formule choisie *</label>
+                    <select id="reg-pack" required onchange="updatePriceSummary()">
+                        <option value="PASS_SIMPLE">Participation Simple - 2 000 FCFA (Pause-café & Kit inclus)</option>
+                        <option value="PACK_COMPLET">Pack Complet - 3 000 FCFA (Participation + Attestation)</option>
+                        <option value="STAND_EXPOSANT">Stand d'Exposition - 5 000 FCFA (Table, 2 chaises & visibilité)
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-category">Catégorie d'acteur *</label>
+                    <select id="reg-category" required>
+                        <option value="AGRICULTEUR">Producteur / Agriculteur</option>
+                        <option value="ETUDIANT">Étudiant / Élève</option>
+                        <option value="ENTREPRENEUR">Jeune Entrepreneur Agro-Bio</option>
+                        <option value="CHERCHEUR">Chercheur / Enseignant</option>
+                        <option value="ONG">ONG / Société Civile</option>
+                        <option value="CITOYEN">Citoyen Consommateur</option>
+                    </select>
+                </div>
+
+                <!-- Live Price Summary Box -->
+                <div class="price-summary-box" id="price-summary-box">
+                    <span>Montant total à régler à l'accueil :</span>
+                    <strong id="price-summary-amount">2 000 FCFA</strong>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg">
+                    <i class="fa-solid fa-check-circle"></i> Valider mon Inscription
+                </button>
+            </form>
+
+            <div class="modal-success hidden" id="modal-success">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3>Inscription Enregistrée !</h3>
+                <p>Votre demande a été enregistrée avec succès. Un SMS / WhatsApp de confirmation vous sera envoyé.</p>
+                <div class="success-actions">
+                    <button class="btn btn-primary" onclick="closeRegisterModal(); scrollToBadge();">
+                        <i class="fa-solid fa-id-card"></i> Générer mon Badge "J'y serai !"
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <img src="assets/logo-jbae.png" alt="Logo JBAÉ" class="logo-image">
+                    </div>
+                    <span class="title-full">Journée Béninoise de l'Agroécologie</span>
+                </div>
+                <p class="footer-desc">
+                    Initié par <strong>Génération Lumière</strong> et <strong>D'Natures</strong>. Promouvoir une
+                    agriculture durable et des opportunités pour la jeunesse béninoise.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">Le Thème JBAE</a></li>
+                    <li><a href="#key-info">Programme de la journée</a></li>
+                    <li><a href="#tarifs">Tarifs & Commodités</a></li>
+                    <li><a href="#badge-section">Générateur de Badge</a></li>
+                    <li><a href="#partners">Partenaires</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact & Inscriptions</h4>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-envelope"></i> contact@jbae-benin.org</li>
+                    <li><i class="fa-solid fa-phone"></i> +229 97 00 11 22 / +229 95 33 44 55</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Cotonou, République du Bénin</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Réseaux Sociaux</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <a href="https://www.facebook.com/myson.pixel" aria-label="MysonPixel"> MysonPixel </a>pour JBAE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="assets/badge-template-data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
