@@ -439,6 +439,59 @@ function closeRegisterModal() {
     if (modal) modal.classList.add("hidden");
 }
 
+/* ==========================================================================
+   EmailJS Configuration & Confirmation Mail Dispatcher
+   ========================================================================== */
+const EMAILJS_CONFIG = {
+    // Remplacer ces 3 clés une fois votre compte EmailJS créé (gratuit sur https://www.emailjs.com)
+    PUBLIC_KEY: "VOTRE_PUBLIC_KEY",      // ex: "uXy7z8AbCdEf"
+    SERVICE_ID: "VOTRE_SERVICE_ID",      // ex: "service_jbae2026"
+    TEMPLATE_ID: "VOTRE_TEMPLATE_ID"     // ex: "template_confirmation"
+};
+
+// Initialisation SDK EmailJS si configuré
+if (typeof emailjs !== "undefined" && EMAILJS_CONFIG.PUBLIC_KEY !== "VOTRE_PUBLIC_KEY") {
+    emailjs.init({ publicKey: EMAILJS_CONFIG.PUBLIC_KEY });
+}
+
+async function sendConfirmationEmail(data) {
+    if (typeof emailjs === "undefined") {
+        console.warn("EmailJS SDK non chargé.");
+        return;
+    }
+
+    if (EMAILJS_CONFIG.PUBLIC_KEY === "VOTRE_PUBLIC_KEY") {
+        console.info(
+            "ℹ️ EmailJS en attente de configuration. Les données prêtes à être envoyées :",
+            data
+        );
+        return;
+    }
+
+    const templateParams = {
+        to_name: `${data.firstname} ${data.lastname}`,
+        to_email: data.email,
+        phone: data.phone,
+        pack_name: data.packLabel,
+        amount: data.amountText,
+        category: data.categoryLabel,
+        beneficiary_name: "Grâce FATON",
+        momo_number: "+229 43 18 23 13",
+        whatsapp_link: data.whatsappUrl
+    };
+
+    try {
+        const response = await emailjs.send(
+            EMAILJS_CONFIG.SERVICE_ID,
+            EMAILJS_CONFIG.TEMPLATE_ID,
+            templateParams
+        );
+        console.log("✅ E-mail de confirmation envoyé avec succès !", response.status, response.text);
+    } catch (err) {
+        console.error("❌ Échec de l'envoi de l'e-mail EmailJS :", err);
+    }
+}
+
 function handleFormSubmit(e) {
     e.preventDefault();
     const firstname = document.getElementById("reg-firstname").value.trim();
@@ -478,6 +531,8 @@ function handleFormSubmit(e) {
         `💰 *Montant :* ${amountText}`,
         `🎯 *Profil / Rôle :* ${categoryLabel}`,
         "------------------------------------",
+        "💳 *Paiement :* MoMo / Flooz vers Grâce FATON (+229 43 18 23 13) ou à l'accueil",
+        "------------------------------------",
         "📍 _Message envoyé depuis le site officiel de la JBAE 2026_"
     ];
     const encodedMessage = encodeURIComponent(messageLines.join("\n"));
@@ -488,6 +543,18 @@ function handleFormSubmit(e) {
     if (reopenBtn) {
         reopenBtn.href = whatsappUrl;
     }
+
+    // Trigger EmailJS Confirmation
+    sendConfirmationEmail({
+        firstname,
+        lastname,
+        email,
+        phone,
+        packLabel,
+        amountText,
+        categoryLabel,
+        whatsappUrl
+    });
 
     // Show Success State inside modal
     document.getElementById("registration-form").classList.add("hidden");

@@ -532,10 +532,10 @@
             <div class="modal-success hidden" id="modal-success">
                 <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
                 <h3>Inscription Enregistrée !</h3>
-                <p>Vos informations ont été préparées. La redirection vers WhatsApp s'ouvre pour valider votre commande avec notre équipe.</p>
+                <p id="modal-success-msg">Un e-mail récapitulatif avec les modalités de paiement vous a été envoyé. La discussion WhatsApp s'ouvre pour finaliser votre commande avec notre équipe.</p>
                 <div class="success-actions" style="display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem;">
                     <a id="btn-reopen-whatsapp" href="#" target="_blank" class="btn btn-secondary btn-block">
-                        <i class="fa-brands fa-whatsapp"></i> Envoyer / Réouvrir sur WhatsApp (43 18 23 13)
+                        <i class="fa-brands fa-whatsapp"></i> Envoyer ma preuve / Discuter sur WhatsApp (43 18 23 13)
                     </a>
                     <button class="btn btn-primary btn-block" onclick="closeRegisterModal(); scrollToBadge();">
                         <i class="fa-solid fa-id-card"></i> Générer mon Badge "J'y serai !"
@@ -596,6 +596,8 @@
         </div>
     </footer>
 
+    <!-- EmailJS SDK (pour l'envoi d'e-mails de confirmation) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/badge-template-data.js"></script>
     <script src="app.js"></script>
