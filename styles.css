@@ -549,6 +549,12 @@ section {
     margin-bottom: 2rem;
 }
 
+.pricing-grid-two {
+    max-width: 860px;
+    margin: 0 auto 2.5rem auto;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
 .pricing-card {
     background-color: var(--primary-bg);
     border: 2px solid var(--border-color);

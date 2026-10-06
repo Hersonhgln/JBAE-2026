@@ -91,8 +91,8 @@
 
             <!-- Hero Action Buttons -->
             <div class="hero-actions">
-                <button class="btn btn-primary btn-lg" onclick="openRegisterModal('PASS_SIMPLE')">
-                    <i class="fa-solid fa-ticket"></i> Réserver mon Pass (2 000 FCFA)
+                <button class="btn btn-primary btn-lg" onclick="openRegisterModal('PASS_UNIQUE')">
+                    <i class="fa-solid fa-ticket"></i> Réserver mon Pass Unique (3 000 FCFA)
                 </button>
                 <a href="#badge-section" class="btn btn-secondary btn-lg">
                     <i class="fa-solid fa-address-card"></i> Générer mon Badge "J'y serai !"
@@ -240,45 +240,28 @@
     <!-- Pricing / Rates Section (FCFA) -->
     <section class="tarifs-section" id="tarifs">
         <div class="container">
-            <h2 class="section-title">Tarifs & Commodités Incluses</h2>
+            <h2 class="section-title">Tarifs & Inscriptions</h2>
             <p class="section-subtitle">
                 Des tarifs étudiés et accessibles pour garantir la participation massive de la jeunesse béninoise
             </p>
-            <div class="pricing-grid">
-                <!-- Pass Simple -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h4>Participation Simple</h4>
-                        <div class="price">2 000 <span class="currency">FCFA</span></div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fa-solid fa-check"></i> Accès à l'ensemble des conférences & panels</li>
-                        <li><i class="fa-solid fa-check"></i> Participation aux ateliers pratiques</li>
-                        <li><i class="fa-solid fa-check"></i> Accès à l'espace Foire & Stands d'Exposition</li>
-                        <li><i class="fa-solid fa-check"></i> Pause-café offerte par le comité</li>
-                        <li><i class="fa-solid fa-check"></i> Kit participant inclus</li>
-                    </ul>
-                    <button class="btn btn-primary btn-block" onclick="openRegisterModal('PASS_SIMPLE')">
-                        S'inscrire (2 000 FCFA)
-                    </button>
-                </div>
-
-                <!-- Pack Complet (Featured) -->
+            <div class="pricing-grid pricing-grid-two">
+                <!-- Pass Unique (Featured) -->
                 <div class="pricing-card featured">
                     <div class="popular-badge">Recommandé</div>
                     <div class="pricing-header">
-                        <h4>Pack Complet</h4>
+                        <h4>Pass Unique</h4>
                         <div class="price">3 000 <span class="currency">FCFA</span></div>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fa-solid fa-check"></i> Tout le contenu du Pass Simple</li>
-                        <li><i class="fa-solid fa-check"></i> Pause-café & Kit du participant inclus</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Attestation officielle de participation</strong>
-                        </li>
+                        <li><i class="fa-solid fa-check"></i> Accès à l'ensemble des conférences &amp; panels</li>
+                        <li><i class="fa-solid fa-check"></i> Participation aux ateliers pratiques</li>
+                        <li><i class="fa-solid fa-check"></i> Accès à l'espace Foire &amp; Stands d'Exposition</li>
+                        <li><i class="fa-solid fa-check"></i> Pause-café &amp; Kit du participant inclus</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Attestation officielle de participation incluse</strong></li>
                         <li><i class="fa-solid fa-check"></i> Inscription prioritaire aux sessions B2B</li>
                     </ul>
-                    <button class="btn btn-secondary btn-block" onclick="openRegisterModal('PACK_COMPLET')">
-                        Choisir le Pack Complet
+                    <button class="btn btn-secondary btn-block btn-lg" onclick="openRegisterModal('PASS_UNIQUE')">
+                        <i class="fa-solid fa-ticket"></i> Réserver mon Pass Unique (3 000 FCFA)
                     </button>
                 </div>
 
@@ -291,19 +274,19 @@
                     <ul class="pricing-features">
                         <li><i class="fa-solid fa-check"></i> Espace d'exposition réservé (Table + 2 Chaises)</li>
                         <li><i class="fa-solid fa-check"></i> Valorisation directe de vos produits bio</li>
-                        <li><i class="fa-solid fa-check"></i> Visibilité devant 500+ participants & médias</li>
+                        <li><i class="fa-solid fa-check"></i> Visibilité devant 500+ participants &amp; médias</li>
                         <li><i class="fa-solid fa-check"></i> Référencement dans le catalogue JBAE</li>
+                        <li><i class="fa-solid fa-check"></i> Kit exposant &amp; attestation inclus</li>
                     </ul>
-                    <button class="btn btn-light btn-block" onclick="openRegisterModal('STAND_EXPOSANT')">
-                        Réserver un Stand (5 000 FCFA)
+                    <button class="btn btn-primary btn-block btn-lg" onclick="openRegisterModal('STAND_EXPOSANT')">
+                        <i class="fa-solid fa-store"></i> Réserver un Stand (5 000 FCFA)
                     </button>
                 </div>
             </div>
 
             <!-- Optional Certificate Option Note -->
             <div class="pricing-note">
-                <i class="fa-solid fa-circle-info"></i> <strong>Note :</strong> L'attestation de participation seule
-                peut également être sollicitée ultérieurement pour 1 000 FCFA.
+                <i class="fa-solid fa-circle-info"></i> <strong>Note :</strong> L'attestation officielle de participation est désormais directement incluse dans le Pass Unique à 3 000 FCFA.
             </div>
         </div>
     </section>
@@ -499,10 +482,8 @@
                 <div class="form-group">
                     <label for="reg-pack">Formule choisie *</label>
                     <select id="reg-pack" required onchange="updatePriceSummary()">
-                        <option value="PASS_SIMPLE">Participation Simple - 2 000 FCFA (Pause-café & Kit inclus)</option>
-                        <option value="PACK_COMPLET">Pack Complet - 3 000 FCFA (Participation + Attestation)</option>
-                        <option value="STAND_EXPOSANT">Stand d'Exposition - 5 000 FCFA (Table, 2 chaises & visibilité)
-                        </option>
+                        <option value="PASS_UNIQUE">Pass Unique - 3 000 FCFA (Participation + Pause-café + Kit + Attestation)</option>
+                        <option value="STAND_EXPOSANT">Stand d'Exposition - 5 000 FCFA (Table, 2 chaises &amp; visibilité)</option>
                     </select>
                 </div>
 
@@ -521,7 +502,7 @@
                 <!-- Live Price Summary Box -->
                 <div class="price-summary-box" id="price-summary-box">
                     <span>Montant total à régler :</span>
-                    <strong id="price-summary-amount">2 000 FCFA</strong>
+                    <strong id="price-summary-amount">3 000 FCFA</strong>
                 </div>
 
                 <div style="background: rgba(45, 106, 79, 0.08); border: 1px dashed var(--primary-light); border-radius: var(--radius-sm); padding: 0.9rem; margin-bottom: 1.25rem; font-size: 0.85rem;">

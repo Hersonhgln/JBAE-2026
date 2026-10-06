@@ -425,12 +425,11 @@ function updatePriceSummary() {
     if (!packSelect || !summaryAmount) return;
 
     const val = packSelect.value;
-    if (val === "PASS_SIMPLE") {
-        summaryAmount.textContent = "2 000 FCFA";
-    } else if (val === "PACK_COMPLET") {
-        summaryAmount.textContent = "3 000 FCFA";
-    } else if (val === "STAND_EXPOSANT") {
+    if (val === "STAND_EXPOSANT") {
         summaryAmount.textContent = "5 000 FCFA";
+    } else {
+        // PASS_UNIQUE par défaut
+        summaryAmount.textContent = "3 000 FCFA";
     }
 }
 
@@ -508,9 +507,10 @@ function handleFormSubmit(e) {
     const categoryLabel = categorySelect && categorySelect.selectedIndex >= 0 ? categorySelect.options[categorySelect.selectedIndex].text : category;
 
     // Determine amount
-    let amountText = "2 000 FCFA";
-    if (packValue === "PACK_COMPLET") amountText = "3 000 FCFA";
-    else if (packValue === "STAND_EXPOSANT") amountText = "5 000 FCFA";
+    let amountText = "3 000 FCFA";
+    if (packValue === "STAND_EXPOSANT") {
+        amountText = "5 000 FCFA";
+    }
 
     // Update Badge State automatically with registered name
     badgeState.fullname = `${firstname} ${lastname}`.toUpperCase();
