@@ -4,9 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="G3udNlZwgLZqfEftDHcIaeiXC9JwZ3SFDamvzacGCAc" />
     <title>JBAE 2026 - 2ᵉ Édition | Journée Béninoise de l'Agroécologie</title>
     <meta name="description"
-        content="Site officiel de la 2ᵉ Édition de la Journée Béninoise de l'Agroécologie (JBAE 2026) organisée par Génération Lumière & D'Natures. Découvrez le thème, tarifs, programme, inscrivez-vous et générez votre badge 'J'y serai !'">
+        content="Site officiel de la 2ᵉ Édition de la Journée Béninoise de l'Agroécologie (JBAE 2026) organisée par Génération Lumière & D'Natures. Thème, programme, réservation de pass et badges officiels.">
+    <meta name="keywords"
+        content="JBAE 2026, Journée Béninoise de l'Agroécologie, Agroécologie Bénin, Génération Lumière, D'Natures, Cotonou, Transition agroécologique, Agriculture durable Bénin">
+    <meta name="author" content="Génération Lumière & D'Natures">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jbae-amber.vercel.app/">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jbae-amber.vercel.app/">
+    <meta property="og:title" content="JBAE 2026 - 2ᵉ Édition | Journée Béninoise de l'Agroécologie">
+    <meta property="og:description"
+        content="« L'Agroécologie : entre savoirs locaux, innovations et opportunités pour la jeunesse béninoise ». Réservez votre Pass et générez votre Badge officiel !">
+    <meta property="og:image" content="https://jbae-amber.vercel.app/assets/hero-bg.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="JBAE 2026">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://jbae-amber.vercel.app/">
+    <meta name="twitter:title" content="JBAE 2026 - 2ᵉ Édition | Journée Béninoise de l'Agroécologie">
+    <meta name="twitter:description"
+        content="Le grand rassemblement de la transition agroécologique au Bénin. Inscriptions et badges en ligne.">
+    <meta name="twitter:image" content="https://jbae-amber.vercel.app/assets/hero-bg.jpg">
+
+    <!-- Structured Data (Schema.org Event for Google Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "2ᵉ Édition de la Journée Béninoise de l'Agroécologie (JBAE 2026)",
+      "description": "Grand rassemblement dédié à la jeunesse, aux agriculteurs, chercheurs et entrepreneurs pour accélérer la transition agroécologique au Bénin.",
+      "startDate": "2026-11-15T08:30:00+01:00",
+      "endDate": "2026-11-15T18:00:00+01:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Palais des Congrès / Salle d'Exposition",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cotonou",
+          "addressCountry": "BJ"
+        }
+      },
+      "image": [
+        "https://jbae-amber.vercel.app/assets/hero-bg.jpg",
+        "https://jbae-amber.vercel.app/assets/logo-jbae.png"
+      ],
+      "organizer": [
+        {
+          "@type": "Organization",
+          "name": "Génération Lumière"
+        },
+        {
+          "@type": "Organization",
+          "name": "D'Natures"
+        }
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Pass Unique",
+          "price": "3000",
+          "priceCurrency": "XOF",
+          "url": "https://jbae-amber.vercel.app/#tarifs",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Stand d'Exposition",
+          "price": "5000",
+          "priceCurrency": "XOF",
+          "url": "https://jbae-amber.vercel.app/#tarifs",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-jbae.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -256,11 +340,12 @@
                         <li><i class="fa-solid fa-check"></i> Participation aux ateliers pratiques</li>
                         <li><i class="fa-solid fa-check"></i> Accès à l'espace Foire &amp; Stands d'Exposition</li>
                         <li><i class="fa-solid fa-check"></i> Pause-café &amp; Kit du participant inclus</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Attestation officielle de participation incluse</strong></li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Attestation officielle de participation
+                                incluse</strong></li>
                         <li><i class="fa-solid fa-check"></i> Inscription prioritaire aux sessions B2B</li>
                     </ul>
                     <button class="btn btn-secondary btn-block btn-lg" onclick="openRegisterModal('PASS_UNIQUE')">
-                        <i class="fa-solid fa-ticket"></i> Réserver mon Pass Unique (3 000 FCFA)
+                        <i class="fa-solid fa-ticket"></i> Réserver mon Pass
                     </button>
                 </div>
 
@@ -278,14 +363,15 @@
                         <li><i class="fa-solid fa-check"></i> Kit exposant &amp; attestation inclus</li>
                     </ul>
                     <button class="btn btn-primary btn-block btn-lg" onclick="openRegisterModal('STAND_EXPOSANT')">
-                        <i class="fa-solid fa-store"></i> Réserver un Stand (5 000 FCFA)
+                        <i class="fa-solid fa-store"></i> Réserver un Stand
                     </button>
                 </div>
             </div>
 
             <!-- Optional Certificate Option Note -->
             <div class="pricing-note">
-                <i class="fa-solid fa-circle-info"></i> <strong>Note :</strong> L'attestation officielle de participation est désormais directement incluse dans le Pass Unique à 3 000 FCFA.
+                <i class="fa-solid fa-circle-info"></i> <strong>Note :</strong> L'attestation officielle de
+                participation est désormais directement incluse dans le Pass Unique à 3 000 FCFA.
             </div>
         </div>
     </section>
@@ -317,7 +403,8 @@
                     </div>
 
                     <div class="badge-action-btns">
-                        <button class="btn btn-primary btn-block btn-lg" id="btn-download-badge" onclick="downloadBadge()">
+                        <button class="btn btn-primary btn-block btn-lg" id="btn-download-badge"
+                            onclick="downloadBadge()">
                             <i class="fa-solid fa-download"></i> Télécharger mon Badge (PNG HD)
                         </button>
                         <button class="btn btn-secondary btn-block" id="btn-copy-share" onclick="copyShareText()">
@@ -338,7 +425,8 @@
 
                     <div class="badge-share-tips">
                         <p><i class="fa-solid fa-share-nodes"></i> N'oubliez pas d'ajouter le hashtag
-                            <strong>#JBAE2026</strong> lors de votre publication sur vos réseaux sociaux !</p>
+                            <strong>#JBAE2026</strong> lors de votre publication sur vos réseaux sociaux !
+                        </p>
                     </div>
                 </div>
             </div>
@@ -348,7 +436,7 @@
     <!-- Partners & Organizers Section -->
     <section class="partners-section" id="partners">
         <div class="container">
-            
+
             <h2 class="section-title">Comité d'Organisation & Partenaires</h2>
 
             <div class="organizers-highlight-card">
@@ -371,7 +459,7 @@
                     </div>
                 </div>
             </div>
-<!--
+            <!--
             <div class="partners-grid">
                 <div class="partner-card">
                     <div class="partner-logo-box">
@@ -481,8 +569,10 @@
                 <div class="form-group">
                     <label for="reg-pack">Formule choisie *</label>
                     <select id="reg-pack" required onchange="updatePriceSummary()">
-                        <option value="PASS_UNIQUE">Pass Unique - 3 000 FCFA (Participation + Pause-café + Kit + Attestation)</option>
-                        <option value="STAND_EXPOSANT">Stand d'Exposition - 5 000 FCFA (Table, 2 chaises &amp; visibilité)</option>
+                        <option value="PASS_UNIQUE">Pass Unique - 3 000 FCFA (Participation + Pause-café + Kit +
+                            Attestation)</option>
+                        <option value="STAND_EXPOSANT">Stand d'Exposition - 5 000 FCFA (Table, 2 chaises &amp;
+                            visibilité)</option>
                     </select>
                 </div>
 
@@ -504,17 +594,21 @@
                     <strong id="price-summary-amount">3 000 FCFA</strong>
                 </div>
 
-                <div style="background: rgba(45, 106, 79, 0.08); border: 1px dashed var(--primary-light); border-radius: var(--radius-sm); padding: 0.9rem; margin-bottom: 1.25rem; font-size: 0.85rem;">
+                <div
+                    style="background: rgba(45, 106, 79, 0.08); border: 1px dashed var(--primary-light); border-radius: var(--radius-sm); padding: 0.9rem; margin-bottom: 1.25rem; font-size: 0.85rem;">
                     <div style="font-weight: 700; color: var(--primary-dark); margin-bottom: 0.35rem;">
-                        <i class="fa-solid fa-money-bill-transfer"></i> Moyens de transfert (Bénéficiaire : <strong>Sènan FATON</strong>) :
+                        <i class="fa-solid fa-money-bill-transfer"></i> Moyens de transfert (Bénéficiaire :
+                        <strong>Sènan FATON</strong>) :
                     </div>
-                    <ul style="list-style: none; padding-left: 0; margin: 0; display: flex; flex-direction: column; gap: 0.25rem; color: var(--text-dark);">
+                    <ul
+                        style="list-style: none; padding-left: 0; margin: 0; display: flex; flex-direction: column; gap: 0.25rem; color: var(--text-dark);">
                         <li>💛 <strong>MTN MoMo :</strong> <code>01 97 47 75 35</code></li>
                         <li>💙 <strong>MOOV Money :</strong> <code>01 60 07 55 36</code></li>
                         <li>💚 <strong>CELTIIS Cash :</strong> <code>01 43 18 23 13</code></li>
                     </ul>
                     <small style="display: block; margin-top: 0.4rem; color: var(--text-muted);">
-                        ⚡ Règlement à l'avance recommandé pour éviter le sold-out • Paiement sur place possible le jour J selon les places disponibles.
+                        ⚡ Règlement à l'avance recommandé pour éviter le sold-out • Paiement sur place possible le jour
+                        J selon les places disponibles.
                     </small>
                 </div>
 
@@ -526,8 +620,12 @@
             <div class="modal-success hidden" id="modal-success">
                 <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
                 <h3>Inscription Enregistrée !</h3>
-                <p id="modal-success-msg">Un e-mail récapitulatif avec les modalités de transfert (copie à <code>gfaton251@gmail.com</code>) vous a été préparé. La discussion WhatsApp s'ouvre pour valider votre place.</p>
-                <div class="success-actions" style="display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem;">
+                <p id="modal-success-msg">Un e-mail récapitulatif avec les modalités de transfert (copie à
+                    <code>gfaton251@gmail.com</code>) vous a été préparé. La discussion WhatsApp s'ouvre pour valider
+                    votre place.
+                </p>
+                <div class="success-actions"
+                    style="display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem;">
                     <a id="btn-reopen-whatsapp" href="#" target="_blank" class="btn btn-secondary btn-block">
                         <i class="fa-brands fa-whatsapp"></i> Envoyer ma preuve / Discuter sur WhatsApp (43 18 23 13)
                     </a>
@@ -586,7 +684,8 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 <a href="https://www.facebook.com/myson.pixel" aria-label="MysonPixel"> MysonPixel </a>pour JBAE. Tous droits réservés.</p>
+            <p>&copy; 2026 <a href="https://www.facebook.com/myson.pixel" aria-label="MysonPixel"> MysonPixel </a>pour
+                JBAE. Tous droits réservés.</p>
         </div>
     </footer>
 
